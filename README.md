@@ -2,6 +2,28 @@
 
 ### About
 
+Fork of https://github.com/ahoopen/typescript-mono-repo
+
+**Note:** Working in Windows you may encounter an error running: ```yarn build: core``` The issue relates to rollup and the case of your windows path!
+
+*Works* 
+```C:\dev_sandbox\monorepo>yarn build:core```
+
+*Does not work...*
+```c:\dev_sandbox\monorepo>yarn build:core``` 
+
+
+*...Error:*
+
+```
+1: export interface BlueButtonProps {
+          ^
+2:   label: string;
+3: }
+Error: Unexpected token (Note that you need plugins to import files that are not JavaScript)
+```
+---
+
 This sample monorepo demonstrates the capability of using [Lerna](https://github.com/lerna/lerna) and [Yarn](https://github.com/yarnpkg/yarn) [Workspaces](https://classic.yarnpkg.com/en/docs/workspaces) to set up a [Create React App](https://github.com/facebook/create-react-app) monorepo with [CRACO](https://github.com/gsoft-inc/craco). This project is configured to use [TypeScript](https://github.com/microsoft/TypeScript), [ESLint](https://github.com/eslint/eslint), and [Prettier](https://github.com/prettier/prettier).
 
 The packages @namespace/app-one and @namespace/app-two are CRA apps, while @namespace/core is a collection of components that can be consumed by either app.
